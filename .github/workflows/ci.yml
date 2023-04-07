@@ -10,10 +10,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - name: build
+        run: |
+          npm install
+          npm run build
+
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: master
-          FOLDER: dist
-          BUILD_SCRIPT: npm install && npm run build
+          FOLDER: ./dist
