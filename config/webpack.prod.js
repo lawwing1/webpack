@@ -7,7 +7,7 @@ const MiniCssExtractPluin = require("mini-css-extract-plugin");
 // const path = require("path");
 
 const config = {
-  mode: "none",
+  mode: "production",
   module: {
     rules: [
       {
